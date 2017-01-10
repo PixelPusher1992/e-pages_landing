@@ -1,0 +1,24 @@
+.header__scroll-button {
+  .arrow{
+    @include size(26px, 26px);
+    display: block;
+    @include center-block;
+    fill: $color-light;
+  }
+  &:hover .arrow {
+    fill: $color-main;
+  }
+}
+
+.white {
+  fill: $color-light;
+}
+.grey {
+  fill: $color-dark;
+}
+.blue {
+  fill: $color-main;
+}
+.light-grey {
+  fill: $color-soft;
+}

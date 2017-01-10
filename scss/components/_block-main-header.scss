@@ -1,0 +1,89 @@
+.block-main-header {
+  position: relative;
+  background-color: $color-soft;
+  height: 200px;
+  overflow: hidden;
+  @media screen and (min-width: 320px) {
+    text-align: center;
+    height: auto;
+  }
+  @media screen and (min-width: 512px) {
+    text-align: left;
+    .container {
+      display: table;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .container {
+      display: block;
+    }
+  }
+  &__img {
+    @media screen and (min-width: 320px) {
+      margin: 15px auto 0 auto;
+      float: none;
+      width: 35%;
+    }
+    @media screen and (min-width: 512px) {
+      min-width: 157px;
+      float: left;
+      @include margin-vertical(2px);
+      width: 50%;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 180px;
+    }
+    @media screen and (min-width: 992px) {
+      max-width: 220px;
+      height: 188px;
+      width: 20%;
+    }
+  }
+  &__text {
+    @media screen and (min-width: 320px) {
+      float: none;
+      margin-top: 15px;
+    }
+    @media screen and (min-width: 512px) {
+      display: table-cell;
+      vertical-align: middle;
+      width: 75%;
+      margin-top: 0;
+      text-align: center;
+      padding-left: 10px;
+    }
+    @media screen and (min-width: 768px) {
+      display: block;
+      float: right;
+      margin-top: 20px;
+      text-align: right;
+    }
+    @media screen and (min-width: 992px) {
+      margin-top: 22px;
+      width: 80%;
+      text-align: right;
+    }
+  }
+  &__pattern {
+    width:70%;
+    height: 100px;
+    background-color: $color-light;
+    transform: skew(-45deg);
+    @media screen and (min-width: 320px) {
+      display: none;
+    }
+    @media screen and (min-width: 768px) {
+      display: block;
+      @include absoluteLocation(false -25% -10% false);
+      width:90%;
+    }
+    @media screen and (min-width: 992px) {
+      display: block;
+      @include absoluteLocation(false -20% 0 false);
+    }
+    @media screen and (min-width: 1300px) {
+      display: block;
+      @include absoluteLocation(false -25% 0 false);
+    }
+  }
+}

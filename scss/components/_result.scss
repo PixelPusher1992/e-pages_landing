@@ -1,0 +1,146 @@
+.result {
+  background: $back-review no-repeat;
+  background-position-y: 60px;
+  margin-top: 90px;
+  overflow: hidden;
+  padding-bottom: 60px;
+  @media screen and (min-width:320px) {
+    background-size: 1500%;
+  }
+  @media screen and (min-width:768px) {
+    background-size: 400%;
+  }
+  @media screen and (min-width:992px) {
+    background-size: 300%;
+  }
+  @media screen and (min-width:1200px) {
+    background-size: 250%;
+  }
+  &__header {
+    position: relative;
+    &-pattern {
+      background-color: $color-soft;
+      @media screen and (min-width:320px) {
+        width: 100%;
+        height:auto;
+        position: static;
+        transform: skew(0deg);
+        padding-left: 0;
+        @include padding-vertical(10px);
+        text-align: center;
+      }
+      @media screen and (min-width:768px) {
+        width:45%;
+        height: 150px;
+        @include absoluteLocation(0 -15% false false);
+        transform: skew(-45deg);
+        padding-top: 9px;
+        padding-left: 3%;
+        text-align: left;
+      }
+      @media screen and (min-width:992px) {
+        @include absoluteLocation(0 -12% false false);
+      }
+      @media screen and (min-width:1300px) {
+        @include absoluteLocation(0 -7% false false);
+      }
+    }
+    &-img {
+      max-width: 160px;
+      transform: skew(45deg);
+      @media screen and (min-width: 320px) {
+        transform: skew(0deg);
+        @include margin-horizontal(auto);
+      }
+      @media screen and (min-width: 768px) {
+        transform: skew(45deg);
+        margin-left: 20px;
+      }
+      @media screen and (min-width: 1300px) {
+        margin-left: 0;
+      }
+    }
+  }
+  & .container {
+    margin-top: 80px;
+    @media screen and (min-width: 320px){
+      margin-top: 0;
+    }
+    @media screen and (min-width: 768px){
+      margin-top: 90px;
+    }
+    @media screen and (min-width: 992px){
+      margin-top: 80px;
+    }
+    &:before {
+      @media screen and (min-width: 320px){
+        display: none;
+      }
+    }
+  }
+  &__head-text {
+    @media screen and (min-width: 320px){
+      text-align: center;
+      margin-top: 20px;
+    }
+    @media screen and (min-width: 512px){
+      padding-bottom: 30px;
+    }
+    @media screen and (min-width: 768px){
+      text-align: left;
+      padding-left: 30px;
+      padding-bottom: 40px;
+    }
+    @media screen and (min-width: 992px){
+      padding-bottom: 0;
+    }
+  }
+  &__content {
+    padding-bottom: 15px;
+    @media screen and (min-width: 320px){
+      font-size: 20px;
+      line-height: 20px;
+      display: table;
+    }
+    @media screen and (min-width: 512px){
+      margin-left: 20px;
+    }
+    @media screen and (min-width: 768px){
+      font-size: 24px;
+    }
+    @media screen and (min-width: 992px){
+      font-size: 26px;
+    }
+    &-number {
+      margin-right: 20px;
+      @media screen and (min-width: 320px){
+        display: table-cell;
+        vertical-align: middle;
+      }
+      span {
+        display: inline-block;
+        border:2px solid $color-light;
+        border-radius: 50%;
+        text-align: center;
+        @media screen and (min-width: 320px){
+          @include size(30px, 30px);
+          line-height: 25px;
+        }
+        @media screen and (min-width: 768px){
+          @include size(40px, 40px);
+          line-height: 35px;
+        }
+        @media screen and (min-width: 992px){
+          @include size(45px, 45px);
+          line-height: 40px;
+        }
+      }
+    }
+    &-text {
+      display: table-cell;
+      padding-left: 20px;
+      vertical-align: middle;
+      line-height: 28px;
+    }
+  }
+}

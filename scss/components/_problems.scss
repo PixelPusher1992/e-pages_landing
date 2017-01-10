@@ -1,0 +1,128 @@
+.problems {
+  margin-bottom: 80px;
+  margin-top: -20px;
+  &__content {
+    position: relative;
+    @media screen and (min-width: 320px){
+      margin-top: 20px;
+    }
+    @media screen and (min-width: 768px){
+      margin-top: -50px;
+    }
+    & .row {
+      @media screen and (min-width: 320px){
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width: 512px){
+        margin-bottom: 10px;
+        display: block;
+      }
+      @media screen and (min-width: 768px){
+        margin-bottom: 10px;
+      }
+      .problems__content-text-table {
+        @media screen and (min-width: 512px){
+          width: 70%;
+        }
+      }
+      .problems__content-img-table {
+        @media screen and (min-width: 512px){
+          width: 30%;
+        }
+      }
+    }
+    &-text {
+      @media screen and (min-width: 320px){
+        font-size: 20px;
+        height: auto;
+        padding-top: 0;
+        padding-left: 0;
+        text-align: center;
+      }
+      @media screen and (min-width: 512px){
+        font-size: 24px;
+        height: 180px;
+        padding-top: 0;
+        padding-left: 0;
+        text-align: left;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      @media screen and (min-width: 768px){
+        vertical-align: bottom;
+        padding-bottom: 20px;
+      }
+      @media screen and (min-width: 992px){
+        padding-left: 30px;
+      }
+      &:after {
+        content: '';
+        @include absoluteLocation(false false 11px 15px );
+        height: 2px;
+        background-color: $color-main;
+        @media screen and (min-width: 320px){
+          display: none;
+        }
+        @media screen and (min-width: 768px){
+          display: block;
+          width: 98%;
+        }
+        @media screen and (min-width: 992px){
+          width: 108%;
+        }
+        @media screen and (min-width: 1200px){
+          width: 109%;
+        }
+      }
+    }
+    &-img {
+      position: relative;
+      @media screen and (min-width: 320px){
+        float: none;
+        text-align: center;
+      }
+      @media screen and (min-width: 512px){
+        text-align: left;
+      }
+      @media screen and (min-width: 768px){
+        float: right;
+      }
+
+      &:before {
+        content: '';
+        @include absoluteLocation(false false 35px -8px );
+        @include size(20px, 20px);
+        background-color: $color-light;
+        border: 2px solid $color-main;
+        border-radius: 50%;
+        z-index: 10;
+        @media screen and (min-width: 320px){
+          display: none;
+        }
+        @media screen and (min-width: 768px){
+          display: block;
+        }
+      }
+      &:after {
+        content: '';
+        @include size(60px, 2px);
+        background-color: $color-main;
+        transform: rotate(-30deg);
+        @media screen and (min-width: 320px){
+          display: none;
+        }
+        @media screen and (min-width: 768px){
+          display: block;
+          @include size(52px, 2px);
+          @include absoluteLocation(false false 29px -53px );
+        }
+        @media screen and (min-width: 992px){
+          left: -55px;
+        }
+      }
+    }
+  }
+}

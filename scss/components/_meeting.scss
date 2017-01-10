@@ -1,0 +1,37 @@
+.meeting {
+  background: $color-soft;
+  padding-top: 25px;
+  z-index: -1;
+  &__header {
+    font-size: 36px;
+    position: relative;
+    &:before {
+      content: '';
+      @include size(100%, 1px);
+      @include absoluteLocation(103px false false 0);
+      background-color: $color-main;
+      @media screen and (min-width: 512px){
+        @include absoluteLocation(94px false false 0);
+      }
+      @media screen and (min-width: 768px){
+        @include absoluteLocation(89px false false 0);
+      }
+      @media screen and (min-width: 992px){
+        @include absoluteLocation(143px false false 0);
+      }
+    }
+  }
+  &__symbol {
+    width: 78px;
+    margin-top: -35px;
+  }
+  &__button.header__button {
+    @include margin-vertical(0, 60px);
+    @media screen and (min-width: 320px){
+      @include padding-horizontal(10px);
+    }
+    @media screen and (min-width: 400px){
+      @include padding-horizontal(30px);
+    }
+  }
+}

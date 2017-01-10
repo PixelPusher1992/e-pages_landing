@@ -1,0 +1,67 @@
+.pop-up {
+  position: relative;
+  .form {
+    &__text {
+      background: $color-soft;
+      @include padding-vertical(25px);
+      margin: 0 0 25px 0;
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+    &__button {
+      width: 95%;
+      @include center-block;
+      @include padding-vertical(25px);
+      border-top: 1px solid $color-main;
+      @media screen and (min-width: 320px){
+        width: 90%;
+      }
+      @media screen and (min-width: 512px){
+        width: 95%;
+      }
+      .header__button {
+        font-size: 26px;
+        width: 298px;
+        padding: 10px 12px;
+        @media screen and (min-width: 320px){
+          font-size: 20px;
+          width: 230px;
+        }
+        @media screen and (min-width: 512px){
+          font-size: 26px;
+          width: 298px;
+        }
+      }
+    }
+    &__field {
+      @media screen and (min-width: 320px){
+        width: 230px;
+      }
+      @media screen and (min-width: 512px){
+        width: 300px;
+      }
+    }
+  }
+  &__close {
+    display: none;
+    @include absoluteLocation(5px 5px false false);
+    border-radius: 50%;
+    background-color: $color-alert;
+    font-size: 20px;
+    color: $color-light;
+    border:none;
+    padding: 0px 12px 3px;
+    &:hover {
+      background-color: $color-light;
+      color: $color-dark;
+    }
+  }
+}
+
+
+//TO MAKE BUTTON VISIBLE only in pop-up form
+.pop-up .pop-up__close {
+  display: block;
+}

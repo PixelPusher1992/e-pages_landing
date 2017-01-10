@@ -1,0 +1,184 @@
+.form {
+  &__fields {
+    @media screen and (min-width: 320px){
+      width:90%;
+      @include center-block;
+    }
+    @media screen and (min-width: 512px){
+      width: auto;
+    }
+
+    @media screen and (max-height: 485px){
+      text-align: center;
+    }
+    &-input {
+      max-width: 300px;
+      padding: 10px 10px 10px 25px;
+      margin-top: 1%;
+      font-size: 20px;
+      height: auto;
+      border: 1px solid #cccccc;
+      border-radius: 2px;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.25) inset;
+      transition: all $time-animation;
+      will-change: border-color, box-shadow;
+      @media screen and (max-height: 384px) {
+        max-width: 360px;
+        width: 49%;
+        display: inline-block;
+      }
+      @media screen and (max-height: 435px) {
+        max-width: 360px;
+        width: 49%;
+        display: inline-block;
+      }
+      @media screen and (min-width: 768px) and (max-height: 485px){
+        max-width: 500px;
+        width: 49%;
+        display: inline-block;
+      }
+      &:focus {
+        border-color: $color-main;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+        0 0 8px rgba(0,107,130,.6);
+      }
+      &::-webkit-input-placeholder {
+        opacity: 1;
+        transition: all $time-animation;
+        will-change: opacity;
+      }
+      &:-ms-input-placeholder {
+        opacity: 1;
+        transition: all $time-animation;
+        will-change: opacity;
+      }
+      &::-moz-placeholder {
+        opacity: 1;
+        transition: all $time-animation;
+        will-change: opacity;
+      }
+      &:-moz-placeholder {
+        opacity: 1;
+        transition: all $time-animation;
+        will-change: opacity;
+      }
+      &:focus::-webkit-input-placeholder {
+        opacity: 0;
+      }
+      &:focus:-moz-placeholder {
+        opacity: 0;
+      }
+      &:focus::-moz-placeholder {
+        opacity: 0;
+      }
+      &:focus:-ms-input-placeholder {
+        opacity: 0;
+      }
+    }
+  }
+  &__text {
+    @include padding-horizontal(50px);
+    position: relative;
+    border-radius: 6px 6px 0 0;
+    @media screen and (min-width: $screen-phone) {
+      font-size: 20px;
+      margin-top: 8%;
+      line-height: 24px;
+      margin-bottom: 3%;
+    }
+    @media screen and (min-width: 412px) {
+      margin-bottom: 7%;
+    }
+    @media screen and (min-width: 736px) {
+      font-size: 32px;
+      margin-bottom: 2%;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 5%;
+    }
+    @media screen and (min-width: 768px) and (max-height: 600px){
+      margin-top: 4%;
+    }
+    @media screen and (min-width: 992px) {
+      font-size: 30px;
+      margin-top: 5%;
+      margin-bottom: 3%;
+    }
+
+    @media screen and (max-height: 412px) {
+      margin-top: 0;
+      margin-bottom: 2%;
+    }
+    @media screen and (max-height: $screen-phone) {
+      margin-top: 0;
+      margin-bottom: 2%;
+    }
+    &:before {
+      content: "";
+      @include absoluteLocation(10px false false 0);
+      @include size(15%, 1px);
+      background-color: $color-main;
+      @media screen and (min-width: $screen-phone) {
+        display: none;
+      }
+      @media screen and (min-width: 992px) {
+        display: block;
+      }
+    }
+    &:after {
+      content: "";
+      @include absoluteLocation(10px 0 false false);
+      @include size(15%, 1px);
+      background-color: $color-main;
+      display: none;
+      @media screen and (min-width: 992px) {
+        display: block;
+      }
+    }
+  }
+  &:focus {
+    outline-color: $color-main;
+  }
+  &__button {
+    @media screen and (min-width: $screen-phone) {
+      margin-top: 8%;
+    }
+    @media screen and (min-width: 568px) {
+      margin-top: 0;
+    }
+    @media screen and (max-height: 360px) {
+      margin-top: 5%;
+    }
+    @media screen and (min-width: 568px) {
+      margin-top: 3%;
+    }
+    @media screen and (min-width: 768px) {
+      margin-top: 4%;
+    }
+  }
+  &__confirm {
+    text-align: center;
+    font-size: 24px;
+    @include padding-horizontal(50px);
+  }
+
+  //VALIDATION
+  &-error{
+    border-color: $color-alert;
+    box-shadow: 1px 1px 3px rgba(245,74,79,0.5) inset;
+    &::-webkit-input-placeholder {
+      color: $color-alert;
+    }
+    &:-moz-placeholder {
+      color: $color-alert;
+    }
+    &::-moz-placeholder {
+      color: $color-alert;
+    }
+    &:-ms-input-placeholder {
+      color: $color-alert;
+    }
+  }
+}
+
